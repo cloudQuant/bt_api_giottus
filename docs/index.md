@@ -11,9 +11,17 @@ pip install bt_api_giottus
 ```
 
 ```python
-from bt_api_giottus import GiottusApi
-feed = GiottusApi(api_key="your_key", secret="your_secret")
-ticker = feed.get_ticker("BTCUSDT")
+from bt_api_py import BtApi
+
+api = BtApi(exchange_kwargs={
+    "GIOTTUS___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
+
+ticker = api.get_tick("GIOTTUS___SPOT", "BTCUSDT")
+print(ticker)
 ```
 
 ## 中文
@@ -27,9 +35,17 @@ pip install bt_api_giottus
 ```
 
 ```python
-from bt_api_giottus import GiottusApi
-feed = GiottusApi(api_key="your_key", secret="your_secret")
-ticker = feed.get_ticker("BTCUSDT")
+from bt_api_py import BtApi
+
+api = BtApi(exchange_kwargs={
+    "GIOTTUS___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
+
+ticker = api.get_tick("GIOTTUS___SPOT", "BTCUSDT")
+print(ticker)
 ```
 
 ## API Reference

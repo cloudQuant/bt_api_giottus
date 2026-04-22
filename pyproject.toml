@@ -18,3 +18,15 @@ dev = ["pytest"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/bt_api_giottus"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["I", "UP", "E", "F", "W", "TRY003", "TC"]
+ignore = ["TC002"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**" = ["I001", "UP037"]

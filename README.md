@@ -40,13 +40,16 @@ pip install -e .
 ### Quick Start
 
 ```python
-from bt_api_giottus import GiottusApi
+from bt_api_py import BtApi
 
-# Initialize
-feed = GiottusApi(api_key="your_key", secret="your_secret")
+api = BtApi(exchange_kwargs={
+    "GIOTTUS___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
 
-# Get ticker data
-ticker = feed.get_ticker("BTCUSDT")
+ticker = api.get_tick("GIOTTUS___SPOT", "BTCUSDT")
 print(ticker)
 ```
 
@@ -130,13 +133,16 @@ pip install -e .
 ### 快速开始
 
 ```python
-from bt_api_giottus import GiottusApi
+from bt_api_py import BtApi
 
-# 初始化
-feed = GiottusApi(api_key="your_key", secret="your_secret")
+api = BtApi(exchange_kwargs={
+    "GIOTTUS___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
 
-# 获取行情数据
-ticker = feed.get_ticker("BTCUSDT")
+ticker = api.get_tick("GIOTTUS___SPOT", "BTCUSDT")
 print(ticker)
 ```
 

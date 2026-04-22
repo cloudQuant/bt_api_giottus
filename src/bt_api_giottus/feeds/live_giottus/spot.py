@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from bt_api_base.functions.utils import update_extra_data
+
 from bt_api_giottus.feeds.live_giottus.request_base import GiottusRequestData
 
 
